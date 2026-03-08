@@ -43,3 +43,26 @@ void FileGenerator::GenerateFile(){
 	std::cout<<"tiempo: "<<dur.count()<<"\n";
 	file.close();
 }
+
+
+bool FileGenerator::CopyFile(std::string name){
+    std::ifstream origin;
+    std::ofstream destiny;
+
+    origin.open(fileName, std::ios::in | std::ios::binary);
+    destiny.open(name, std::ios::out | std::ios::binary);
+
+    if(!origin.is_open() || !destiny.is_open()){
+        std::cout<<"Error al abrir alguno de los archivos"<<"\n";
+        return false;
+    }
+
+    destiny << origin.rdbuf();
+
+    if(destiny.fail()){
+        std::cout<<"Error de escritura"<<"\n";
+        return false;
+    }
+    return true;
+
+}

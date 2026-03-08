@@ -4,6 +4,7 @@
 #include <string_view>
 #include <random>
 #include <memory>
+#include <ostream>
 
 
 #ifndef FILEGENERATOR_H
@@ -33,6 +34,7 @@ class FileGenerator{
     void SetFileName(std::string_view name){fileName = name; fileName += ".bin";}
 
     void GenerateFile();
+    bool CopyFile(std::string name);
 
 
 };

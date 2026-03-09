@@ -6,6 +6,7 @@
 
 #ifndef FILEGENERATOR_H
 #define FILEGENERATOR_H
+enum SIZES : size_t {SMALL = 536870912, MEDIUM = 1073741824, LARGE = 2147483648};
 class FileGenerator{
     //Calculo de Bytes por array
     static constexpr size_t arraySize = 32768;
@@ -18,7 +19,7 @@ class FileGenerator{
     std::mt19937 gen{rng()};
 
 
-    size_t fileSize = 536870912;
+    SIZES fileSize = SIZES::SMALL;
     size_t totalNumbers = fileSize/totalBytes; //Maximo numero de repeticiones
 
     int32_t buff[arraySize];
@@ -26,8 +27,9 @@ class FileGenerator{
     std::string fileName = "";
 
     public:
-    FileGenerator(size_t fileSize, std::string_view fileName);
-    void SetFileSize(size_t size){fileSize = (size == 512) ? size*1048576 : size*1073741824; totalNumbers = fileSize/totalBytes;}
+    FileGenerator(std::string_view fileSize, std::string_view fileName);
+    void SetFileSize(SIZES size);
+    SIZES stringToSize(std::string_view str);
     size_t GetFileSize(){return fileSize;}
     void SetFileName(std::string_view name);
     std::string GetFileName(){return fileName;}

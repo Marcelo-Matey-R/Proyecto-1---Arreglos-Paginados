@@ -7,9 +7,21 @@
 #include <string_view>
 #include <filesystem>
 
-FileGenerator::FileGenerator(size_t fileSize, std::string_view fileName){
+FileGenerator::FileGenerator(std::string_view fileSize, std::string_view fileName){
     SetFileName(fileName);
-    SetFileSize(fileSize);
+    SetFileSize(stringToSize(fileSize));
+}
+SIZES stringToSize(std::string_view str) {
+    if (str == "SMALL")  return SIZES::SMALL;
+    if (str == "MEDIUM") return SIZES::MEDIUM;
+    if (str == "LARGE")  return SIZES::LARGE;
+    
+    // Manejo de error si el string no coincide
+    throw std::invalid_argument("Tamaño no válido");
+}
+void FileGenerator::SetFileSize(SIZES size){
+	fileSize = size;
+	
 }
 
 void FileGenerator::SetFileName(std::string_view name){
@@ -122,7 +134,7 @@ bool FileGenerator::CopyTxtFile(std::string name){
 		size_t numElements = numberByte/sizeof(int32_t); //Cantidad de numeros
 		
 		for(size_t i = 0; i < numElements; i++){
-			
+
 			//pasar de numeros a texto y almacernar los numeros en el string
 			str.append(std::to_string(buff[i])); 
 			str += ' ';

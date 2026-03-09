@@ -1,4 +1,4 @@
-#include "FileGenerator.h"
+#include "BinaryFileManager.h"
 #include <iostream>
 #include <fstream>
 #include <cstdint>
@@ -7,7 +7,7 @@
 #include <string_view>
 #include <filesystem>
 
-FileGenerator::FileGenerator(std::string_view fileSize, std::string_view fileName){
+BinaryFileManager::BinaryFileManager(std::string_view fileSize, std::string_view fileName){
     SetFileName(fileName);
     SetFileSize(stringToSize(fileSize));
 }
@@ -19,18 +19,18 @@ SIZES stringToSize(std::string_view str) {
     // Manejo de error si el string no coincide
     throw std::invalid_argument("Tamaño no válido");
 }
-void FileGenerator::SetFileSize(SIZES size){
+void BinaryFileManager::SetFileSize(SIZES size){
 	fileSize = size;
 	
 }
 
-void FileGenerator::SetFileName(std::string_view name){
+void BinaryFileManager::SetFileName(std::string_view name){
 	fileName = name;
 	std::filesystem::path file(fileName);
 	file.replace_extension(".bin");
 }
 
-void FileGenerator::GenerateFile(){
+void BinaryFileManager::GenerateFile(){
     std::ofstream file; //Crear la variable del file
     file.open(fileName, std::ios::out | std::ios::trunc | std::ios::binary );
 
@@ -63,7 +63,7 @@ void FileGenerator::GenerateFile(){
 }
 
 
-bool FileGenerator::CopyBinaryFile(std::string name){
+bool BinaryFileManager::CopyBinaryFile(std::string name){
 	std::ifstream origin;
 	std::ofstream destiny;
 
@@ -91,7 +91,7 @@ bool FileGenerator::CopyBinaryFile(std::string name){
 
 }
 
-bool FileGenerator::CopyTxtFile(std::string name){
+bool BinaryFileManager::CopyTxtFile(std::string name){
 	std::ifstream origin;
 	std::ofstream destiny;
 

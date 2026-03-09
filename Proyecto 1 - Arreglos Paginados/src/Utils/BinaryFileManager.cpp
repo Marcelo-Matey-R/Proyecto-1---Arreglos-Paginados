@@ -9,9 +9,9 @@
 
 BinaryFileManager::BinaryFileManager(std::string_view fileSize, std::string_view fileName){
     SetFileName(fileName);
-    SetFileSize(stringToSize(fileSize));
+    SetFileSize(StringToSize(fileSize));
 }
-SIZES stringToSize(std::string_view str) {
+SIZES BinaryFileManager::StringToSize(std::string_view str) {
     if (str == "SMALL")  return SIZES::SMALL;
     if (str == "MEDIUM") return SIZES::MEDIUM;
     if (str == "LARGE")  return SIZES::LARGE;

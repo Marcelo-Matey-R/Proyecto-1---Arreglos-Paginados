@@ -29,7 +29,7 @@ class BinaryFileManager{
     public:
     BinaryFileManager(std::string_view fileSize, std::string_view fileName);
     void SetFileSize(SIZES size);
-    SIZES stringToSize(std::string_view str);
+    SIZES StringToSize(std::string_view str);
     size_t GetFileSize(){return fileSize;}
     void SetFileName(std::string_view name);
     std::string GetFileName(){return fileName;}

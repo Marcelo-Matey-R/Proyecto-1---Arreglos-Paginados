@@ -4,10 +4,10 @@
 #include <random>
 #include <ostream>
 
-#ifndef FILEGENERATOR_H
-#define FILEGENERATOR_H
+#ifndef BINARYFILEMANAGER_H
+#define BINARYFILEMANAGER_H
 enum SIZES : size_t {SMALL = 536870912, MEDIUM = 1073741824, LARGE = 2147483648};
-class FileGenerator{
+class BinaryFileManager{
     //Calculo de Bytes por array
     static constexpr size_t arraySize = 32768;
     static constexpr size_t intSize = sizeof(int32_t);
@@ -27,7 +27,7 @@ class FileGenerator{
     std::string fileName = "";
 
     public:
-    FileGenerator(std::string_view fileSize, std::string_view fileName);
+    BinaryFileManager(std::string_view fileSize, std::string_view fileName);
     void SetFileSize(SIZES size);
     SIZES stringToSize(std::string_view str);
     size_t GetFileSize(){return fileSize;}

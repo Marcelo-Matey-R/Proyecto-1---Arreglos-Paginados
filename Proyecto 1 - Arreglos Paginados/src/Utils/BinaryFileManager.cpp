@@ -111,7 +111,7 @@ bool BinaryFileManager::CopyTxtFile(std::string name){
 
 	//almacenamiento de numeros
 	std::string str; 
-	str.reserve(11 * arraySize);
+	str.reserve(12 * arraySize);
 
     if(!origin.is_open() || !destiny.is_open()){
         std::cout<<"Error al abrir alguno de los archivos"<<"\n";

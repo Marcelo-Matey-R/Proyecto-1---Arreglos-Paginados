@@ -21,13 +21,20 @@ SIZES BinaryFileManager::StringToSize(std::string_view str) {
 }
 void BinaryFileManager::SetFileSize(SIZES size){
 	fileSize = size;
+
+	totalNumbers = fileSize/totalBytes;
 	
 }
 
 void BinaryFileManager::SetFileName(std::string_view name){
 	fileName = name;
 	std::filesystem::path file(fileName);
-	file.replace_extension(".bin");
+
+	if(file.extension() != ".bin"){
+		file.replace_extension(".bin");
+
+		fileName = file.string();
+	}
 }
 
 void BinaryFileManager::GenerateFile(){
@@ -104,7 +111,7 @@ bool BinaryFileManager::CopyTxtFile(std::string name){
 
 	//almacenamiento de numeros
 	std::string str; 
-	str.reserve(11 * totalBytes);
+	str.reserve(11 * arraySize);
 
     if(!origin.is_open() || !destiny.is_open()){
         std::cout<<"Error al abrir alguno de los archivos"<<"\n";
@@ -118,7 +125,7 @@ bool BinaryFileManager::CopyTxtFile(std::string name){
 		str.clear();
 
 
-		origin.read(reinterpret_cast<char*>(&buff[0]), totalNumbers);
+		origin.read(reinterpret_cast<char*>(&buff[0]), totalBytes);
 		
 		size_t numberByte = origin.gcount(); //cantidad de bytes leidos por iteracion
 		
@@ -152,7 +159,7 @@ bool BinaryFileManager::CopyTxtFile(std::string name){
 	}
 	auto end = std::chrono::steady_clock::now();
 	std::chrono::duration<double> dur = end-start;
-	std::cout<<"tiempo: "<<dur.count()<<"\n";
+	std::cout<<"tiempo de copiar a lectura humana: "<<dur.count()<<"\n";
 	origin.close();
 	destiny.close();
 

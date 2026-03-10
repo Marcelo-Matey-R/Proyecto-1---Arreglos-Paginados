@@ -67,7 +67,10 @@ void BinaryFileManager::GenerateFile(){
 
 
 bool BinaryFileManager::CopyBinaryFile(std::string name){
-
+	if(name != "" && name != " ") {throw std::invalid_argument("El path " + name + " no es valido"); return false;}
+	if(fileName != "" && fileName != " "){ throw std::invalid_argument("El path " + fileName + "no es valido"); return false;}
+	if(fileName == name){ throw std::invalid_argument("El path " + fileName + "y el path" + name + "son el mismo"); return false;}
+	
 	std::ifstream origin;
 	std::ofstream destiny;
 

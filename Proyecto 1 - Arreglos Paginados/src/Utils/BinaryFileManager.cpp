@@ -96,8 +96,9 @@ bool BinaryFileManager::CopyBinaryFile(std::string name){
 }
 
 bool BinaryFileManager::CopyTxtFile(std::string nameOrigin, std::string nameDestiny){
-	if(nameOrigin != "" && nameOrigin != " ") throw std::invalid_argument("El path " + nameOrigin + " no es valido"); 
-	if(nameDestiny != "" && nameDestiny != " ") throw std::invalid_argument("El path " + nameDestiny + "no es valido"); 
+	if(nameOrigin != "" && nameOrigin != " ") {throw std::invalid_argument("El path " + nameOrigin + " no es valido"); return false;}
+	if(nameDestiny != "" && nameDestiny != " "){ throw std::invalid_argument("El path " + nameDestiny + "no es valido"); return false;}
+	if(nameDestiny == nameOrigin){ throw std::invalid_argument("El path " + nameDestiny + "y el path" + nameOrigin + "son el mismo"); return false;}
 
 	std::ifstream origin;
 	std::ofstream destiny;

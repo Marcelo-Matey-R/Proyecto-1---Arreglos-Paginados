@@ -36,7 +36,7 @@ class BinaryFileManager{
 
     void GenerateFile();
     bool CopyBinaryFile(std::string name);
-    bool CopyTxtFile(std::string name);
+    bool CopyTxtFile(std::string nameOrigin, std::string nameDestiny);
 
 
 };

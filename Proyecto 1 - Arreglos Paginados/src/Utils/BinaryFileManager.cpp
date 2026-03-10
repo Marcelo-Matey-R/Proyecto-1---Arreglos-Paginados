@@ -19,6 +19,7 @@ SIZES BinaryFileManager::StringToSize(std::string_view str) {
     // Manejo de error si el string no coincide
     throw std::invalid_argument("Tamaño no válido");
 }
+
 void BinaryFileManager::SetFileSize(SIZES size){
 	fileSize = size;
 
@@ -27,15 +28,10 @@ void BinaryFileManager::SetFileSize(SIZES size){
 }
 
 void BinaryFileManager::SetFileName(std::string_view name){
+	if(name != "" && name != " ") throw std::invalid_argument("Path no valido");
 	fileName = name;
-	std::filesystem::path file(fileName);
-
-	if(file.extension() != ".bin"){
-		file.replace_extension(".bin");
-
-		fileName = file.string();
-	}
 }
+
 
 void BinaryFileManager::GenerateFile(){
     std::ofstream file; //Crear la variable del file
@@ -71,6 +67,7 @@ void BinaryFileManager::GenerateFile(){
 
 
 bool BinaryFileManager::CopyBinaryFile(std::string name){
+
 	std::ifstream origin;
 	std::ofstream destiny;
 
@@ -98,16 +95,15 @@ bool BinaryFileManager::CopyBinaryFile(std::string name){
 
 }
 
-bool BinaryFileManager::CopyTxtFile(std::string name){
+bool BinaryFileManager::CopyTxtFile(std::string nameOrigin, std::string nameDestiny){
+	if(nameOrigin != "" && nameOrigin != " ") throw std::invalid_argument("El path " + nameOrigin + " no es valido"); 
+	if(nameDestiny != "" && nameDestiny != " ") throw std::invalid_argument("El path " + nameDestiny + "no es valido"); 
+
 	std::ifstream origin;
 	std::ofstream destiny;
 
-	//asegura la extension de la ruta
-	std::filesystem::path f(name);
-	f.replace_extension(".txt");
-
-	origin.open(fileName, std::ios::in | std::ios::binary);
-	destiny.open(name, std::ios::out);
+	origin.open(nameOrigin, std::ios::in | std::ios::binary);
+	destiny.open(nameDestiny, std::ios::out);
 
 	//almacenamiento de numeros
 	std::string str; 

@@ -8,17 +8,9 @@
 #include <filesystem>
 
 BinaryFileManager::BinaryFileManager(std::string_view fileSize, std::string_view fileName){
-    SetFileName(fileName);
     SetFileSize(StringToSize(fileSize));
 }
-SIZES BinaryFileManager::StringToSize(std::string_view str) {
-    if (str == "SMALL")  return SIZES::SMALL;
-    if (str == "MEDIUM") return SIZES::MEDIUM;
-    if (str == "LARGE")  return SIZES::LARGE;
-    
-    // Manejo de error si el string no coincide
-    throw std::invalid_argument("Tamaño no válido");
-}
+
 
 void BinaryFileManager::SetFileSize(SIZES size){
 	fileSize = size;
@@ -27,15 +19,9 @@ void BinaryFileManager::SetFileSize(SIZES size){
 	
 }
 
-void BinaryFileManager::SetFileName(std::string_view name){
-	if(name != "" && name != " ") throw std::invalid_argument("Path no valido");
-	fileName = name;
-}
-
-
-void BinaryFileManager::GenerateFile(){
+void BinaryFileManager::GenerateFile(std::string filePath){
     std::ofstream file; //Crear la variable del file
-    file.open(fileName, std::ios::out | std::ios::trunc | std::ios::binary );
+    file.open(filePath, std::ios::out | std::ios::trunc | std::ios::binary );
 
 	if(!file.is_open()){
 		std::cout<<"error"<<"\n";
@@ -66,16 +52,12 @@ void BinaryFileManager::GenerateFile(){
 }
 
 
-bool BinaryFileManager::CopyBinaryFile(std::string name){
-	if(name != "" && name != " ") {throw std::invalid_argument("El path " + name + " no es valido"); return false;}
-	if(fileName != "" && fileName != " "){ throw std::invalid_argument("El path " + fileName + "no es valido"); return false;}
-	if(fileName == name){ throw std::invalid_argument("El path " + fileName + "y el path" + name + "son el mismo"); return false;}
-	
+bool BinaryFileManager::CopyBinaryFile(std::string nameOrigin, std::string nameDestiny){
 	std::ifstream origin;
 	std::ofstream destiny;
 
-	origin.open(fileName, std::ios::in | std::ios::binary);
-	destiny.open(name, std::ios::out | std::ios::binary);
+	origin.open(nameOrigin, std::ios::in | std::ios::binary);
+	destiny.open(nameDestiny, std::ios::out | std::ios::binary);
 
     if(!origin.is_open() || !destiny.is_open()){
         std::cout<<"Error al abrir alguno de los archivos"<<"\n";

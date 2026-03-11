@@ -4,6 +4,9 @@
 #include <iostream>
 
 CommandResult Parsed::InputParser(int &argc, char* argv[]){
+    if(argc < 2){
+        throw std::invalid_argument("La cantidad de elementos: argc = " + std::to_string(argc) + " no esta permitida");
+    }
     elements.clear();
 
     std::string command = argv[1];

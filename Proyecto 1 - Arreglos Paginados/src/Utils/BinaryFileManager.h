@@ -3,10 +3,11 @@
 #include <string_view>
 #include <random>
 #include <ostream>
+#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSizes.h"
 
 #ifndef BINARYFILEMANAGER_H
 #define BINARYFILEMANAGER_H
-enum SIZES : size_t {SMALL = 536870912, MEDIUM = 1073741824, LARGE = 2147483648};
+
 class BinaryFileManager{
     //Calculo de Bytes por array
     static constexpr size_t arraySize = 32768;
@@ -24,18 +25,13 @@ class BinaryFileManager{
 
     int32_t buff[arraySize];
 
-    std::string fileName = "";
-
     public:
     BinaryFileManager(std::string_view fileSize, std::string_view fileName);
     void SetFileSize(SIZES size);
-    SIZES StringToSize(std::string_view str);
     SIZES GetFileSize(){return fileSize;}
-    void SetFileName(std::string_view name);
-    std::string GetFileName(){return fileName;}
 
-    void GenerateFile();
-    bool CopyBinaryFile(std::string name);
+    void GenerateFile(std::string filePath);
+    bool CopyBinaryFile(std::string nameOrigin, std::string nameDestiny);
     bool CopyTxtFile(std::string nameOrigin, std::string nameDestiny);
 
 

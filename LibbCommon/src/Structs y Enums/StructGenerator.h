@@ -1,8 +1,8 @@
 #include <string>
 #include <variant>
 #include <cstdint>
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSizes.h"
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSorts.h"
+#include "Structs y Enums\EnumSizes.h"
+#include "Structs y Enums\EnumSorts.h"
 
 #pragma once
 

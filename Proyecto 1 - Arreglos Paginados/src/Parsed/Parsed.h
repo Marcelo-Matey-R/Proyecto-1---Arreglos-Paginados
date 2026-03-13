@@ -6,12 +6,11 @@
 #define PARSED_H
 
 class Parsed{
-    private:
-    std::unordered_map<std::string, std::string> elements;
     public:
-    CommandResult InputParser(int &argc, char* argv[]);
-    std::variant<std::monostate, GeneratorData> ParsedGenerator();
-    std::variant<std::monostate,SorterData> ParsedSorter();
+    static CommandResult InputParser(int argc, char* argv[]);
+    private:
+    static std::variant<std::monostate, GeneratorData> ParsedGenerator(const std::unordered_map<std::string, std::string> &elements);
+    static std::variant<std::monostate,SorterData> ParsedSorter(const std::unordered_map<std::string, std::string> &elements);
 };
 
 #endif

@@ -1,14 +1,16 @@
 #include "Parsed.h"
 #include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSizes.h"
 #include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSorts.h"
+#include <variant>
 #include <iostream>
 
-CommandResult Parsed::InputParser(int &argc, char* argv[]){
+CommandResult Parsed::InputParser(int argc, char* argv[]){
     if(argc < 2){
         throw std::invalid_argument("La cantidad de elementos: argc = " + std::to_string(argc) + " no esta permitida");
         return std::monostate{};
     }
-    elements.clear();
+    
+    std::unordered_map<std::string, std::string> elements;
 
     std::string command = argv[1];
     elements["command"] = command;
@@ -17,7 +19,7 @@ CommandResult Parsed::InputParser(int &argc, char* argv[]){
         for(int i = 2; i < argc; i++){
             std::string val((argv[i]));
             int pos = i+1;
-            if(val == "-size" && pos < argc){
+            if(val == "-sizes" && pos < argc){
                 elements["size"] = argv[pos];
             }
             else if(val == "-output" && pos < argc){
@@ -25,10 +27,17 @@ CommandResult Parsed::InputParser(int &argc, char* argv[]){
             }
         }
         if(elements.size() != 3){
-            std::cout<<"Error comando no tiene los argumentos requeridos"<<"\n";
+            std::cout<<"Error comando no tiene los argumentos requeridos"<<" "<<elements.size()<<"\n";
+            for(const auto& pair : elements){
+                std::cout<<pair.first<<" "<<pair.second<<"\n\n";
+            } 
             return std::monostate{};
         }
-        return ParsedGenerator();
+       auto tmp2 = ParsedGenerator(elements);
+
+        if (std::holds_alternative<GeneratorData>(tmp2)) return std::get<GeneratorData>(tmp2);
+
+        else {std::cout<<"lolazo"; return std::monostate{};}
 
     }
 
@@ -56,7 +65,14 @@ CommandResult Parsed::InputParser(int &argc, char* argv[]){
             std::cout<<"Error comando no tiene los argumentos requeridos"<<"\n";
             return std::monostate{};
         }
-        return ParsedSorter();
+        for(const auto& pair : elements){
+            std::cout<<pair.first<<" "<<pair.second<<"\n\n";
+        } 
+        auto tmp1 = ParsedSorter(elements);
+
+        if (std::holds_alternative<SorterData>(tmp1)) return std::get<SorterData>(tmp1);
+
+        else return std::monostate{};
     }
 
     else{
@@ -64,12 +80,12 @@ CommandResult Parsed::InputParser(int &argc, char* argv[]){
         return std::monostate{};
     }
 
-}
+} 
 
-std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(){
+std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(const std::unordered_map<std::string, std::string> &elements){
     GeneratorData parse;
-    parse.commandType = elements["command"];
-    std::string s = elements["size"];
+    parse.commandType = elements.at("command");
+    std::string s = elements.at("size");
     SIZES size;
     try{
         size = StringToSize(s);
@@ -77,24 +93,24 @@ std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(){
         std::cout<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     }
-    parse.filePath = elements["output"];
+    parse.filePath = elements.at("output");
     parse.fileSize = size;
 
     return parse;
 }
 
-std::variant<std::monostate, SorterData> Parsed::ParsedSorter(){
+std::variant<std::monostate, SorterData> Parsed::ParsedSorter(const std::unordered_map<std::string, std::string> &elements){
     SorterData parse;
     
-    std::string input = elements["input"];
-    std::string output = elements["output"];
+    std::string input = elements.at("input");
+    std::string output = elements.at("output");
     Algo alg;
     size_t pageSize;
     size_t pageCount;
 
     try{
-        pageSize = std::stoull(elements["pageSize"]);
-        pageCount = std::stoull(elements["pageCount"]);
+        pageSize = std::stoull(elements.at("pageSize"));
+        pageCount = std::stoull(elements.at("pageCount"));
     } catch(const std::invalid_argument &e){
         std::cout<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
@@ -104,15 +120,15 @@ std::variant<std::monostate, SorterData> Parsed::ParsedSorter(){
     }
 
     try{
-        alg = StringToAlgo(elements["alg"]);
+        alg = StringToAlgo(elements.at("alg"));
     }catch(const std::invalid_argument &e){
         std::cout<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     }
 
-    parse.commandType = elements["command"];
-    parse.inputFilePath = elements["input"];
-    parse.outputFilePath = elements["output"];
+    parse.commandType = elements.at("command");
+    parse.inputFilePath = elements.at("input");
+    parse.outputFilePath = elements.at("output");
     parse.sortedAlgorithm = alg;
     parse.pageCount = pageCount;
     parse.pageSize = pageSize;

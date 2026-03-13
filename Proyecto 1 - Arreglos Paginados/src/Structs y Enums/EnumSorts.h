@@ -6,14 +6,6 @@
 
 enum class Algo { QUICKSORT, MERGESORT };
 
-Algo StringToAlgo(std::string_view str) {
-    static const std::unordered_map<std::string_view, Algo> tabla = {
-        {"quicksort", Algo::QUICKSORT},
-        {"mergesort", Algo::MERGESORT}
-    };
+Algo StringToAlgo(std::string_view str);
 
-    auto it = tabla.find(str);
-    if (it != tabla.end()) return it->second;
-
-    throw std::invalid_argument("Algoritmo no reconocido");
-}
+std::string_view AlgoToString(Algo alg);

@@ -21,4 +21,4 @@ struct SorterData{
     size_t pageCount;
 };
 
-using CommandResult = std::variant<std::monostate, std::variant<std::monostate, GeneratorData>, std::variant<std::monostate, SorterData>>;
+using CommandResult = std::variant<std::monostate, GeneratorData, SorterData>;

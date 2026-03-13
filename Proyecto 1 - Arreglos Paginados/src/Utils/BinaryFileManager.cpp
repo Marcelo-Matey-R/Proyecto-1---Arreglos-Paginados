@@ -5,9 +5,10 @@
 #include <chrono>
 #include <string>
 #include <string_view>
+#include <charconv>
 #include <filesystem>
 
-BinaryFileManager::BinaryFileManager(std::string_view fileSize, std::string_view fileName){
+BinaryFileManager::BinaryFileManager(std::string_view fileSize){
     SetFileSize(StringToSize(fileSize));
 }
 
@@ -24,66 +25,69 @@ void BinaryFileManager::GenerateFile(std::string filePath){
     file.open(filePath, std::ios::out | std::ios::trunc | std::ios::binary );
 
 	if(!file.is_open()){
-		std::cout<<"error"<<"\n";
-
+		std::cerr<<"Error de apertura"<<"\n";
 		return;
 	}
 	auto start = std::chrono::steady_clock::now();
-	for(size_t count = 0; count < totalNumbers; count++){
-		for(size_t i = 0; i < arraySize-3; i+=4){
-			buff[i] = gen();
-			buff[i+1] = gen();
-			buff[i+2] = gen();
-			buff[i+3] = gen();
-		}
+	try{	
+			for(size_t count = 0; count < totalNumbers; count++){
+				for(size_t i = 0; i < arraySize-3; i+=4){
+					buff[i] = dis(gen);
+					buff[i+1] = dis(gen);
+					buff[i+2] = dis(gen);
+					buff[i+3] = dis(gen);
+				}
 
-		file.write(reinterpret_cast<const char*>(&buff[0]), totalBytes);
-
-		if(file.fail()){
-			std::cout<<"Error de escritura"<<"\n";
-			file.close();
-			return;
-		}
+				file.write(reinterpret_cast<const char*>(&buff[0]), totalBytes);
+			}
+			
+	}catch(const std::filesystem::filesystem_error &e){
+		std::cerr<<"el archivo no sse puedo generar debido a: "<<e.what()<<'\n';
+		return;
 	}
 	auto end = std::chrono::steady_clock::now();
 	std::chrono::duration<double> dur = end-start;
 	std::cout<<"tiempo: "<<dur.count()<<"\n";
-	file.close();
+	return;
 }
 
 
-bool BinaryFileManager::CopyBinaryFile(std::string nameOrigin, std::string nameDestiny){
-	std::ifstream origin;
-	std::ofstream destiny;
+bool BinaryFileManager::CopyBinaryFile(const std::string &nameOrigin, const std::string &nameDestiny){
+	auto start = std::chrono::steady_clock::now();
+	if(std::filesystem::exists(nameDestiny)){
+		if(std::filesystem::equivalent(nameOrigin, nameDestiny)){
+			std::cerr<<"los dos archivos son el mismo"<<'\n';
+			return false;
+		}
+		try{
+			std::filesystem::remove(nameDestiny);
+		}catch(const std::filesystem::filesystem_error &e){
+			std::cerr<<"No se pudo borrar debido a: "<<e.what()<<'\n';
+			return false;
+		}
+	}
+	try{
+		std::filesystem::copy_file(nameOrigin, nameDestiny, std::filesystem::copy_options::overwrite_existing);
+	}catch(const std::filesystem::filesystem_error &e){
+		std::cerr<<"No se pudo copiar debido a: "<<e.what()<<'\n';
+		return false;
+	}
+	auto end = std::chrono::steady_clock::now();
 
-	origin.open(nameOrigin, std::ios::in | std::ios::binary);
-	destiny.open(nameDestiny, std::ios::out | std::ios::binary);
+	std::chrono::duration<double> dur = std::chrono::duration<double>::zero();
+	dur += std::chrono::duration_cast<std::chrono::duration<double>>(end-start);
+	std::cout<<"tiempo copia .bin: "<<dur.count()<<"\n";
 
-    if(!origin.is_open() || !destiny.is_open()){
-        std::cout<<"Error al abrir alguno de los archivos"<<"\n";
-		origin.close();
-		destiny.close();
-        return false;
-    }
-
-    destiny << origin.rdbuf();
-
-    if(destiny.fail()){
-        std::cout<<"Error de escritura"<<"\n";
-		origin.close();
-		destiny.close();
-        return false;
-    }
-	origin.close();
-	destiny.close();
     return true;
 
 }
 
-bool BinaryFileManager::CopyTxtFile(std::string nameOrigin, std::string nameDestiny){
-	if(nameOrigin != "" && nameOrigin != " ") {throw std::invalid_argument("El path " + nameOrigin + " no es valido"); return false;}
-	if(nameDestiny != "" && nameDestiny != " "){ throw std::invalid_argument("El path " + nameDestiny + "no es valido"); return false;}
-	if(nameDestiny == nameOrigin){ throw std::invalid_argument("El path " + nameDestiny + "y el path" + nameOrigin + "son el mismo"); return false;}
+bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::string &nameDestiny){
+	if(nameOrigin == "" || nameOrigin == " "){std::cerr<<"El path " + nameOrigin + " no es valido"<<'\n'; return false;}
+	if(!std::filesystem::exists(nameOrigin)){std::cerr<<"El path " + nameOrigin + " no existe"<<'\n'; return false;}
+	if(nameDestiny == "" || nameDestiny == " "){std::cerr<<"El path " + nameDestiny + "no es valido"<<'\n'; return false;}
+	if(!std::filesystem::exists(nameDestiny)){std::cerr<<"El path " + nameDestiny + " no existe"<<'\n'; return false;}
+	if(std::filesystem::equivalent(nameOrigin, nameDestiny)){std::cerr<<"El path " + nameDestiny + "y el path" + nameOrigin + "son el mismo"<<'\n'; return false;}
 
 	std::ifstream origin;
 	std::ofstream destiny;
@@ -96,54 +100,60 @@ bool BinaryFileManager::CopyTxtFile(std::string nameOrigin, std::string nameDest
 	str.reserve(12 * arraySize);
 
     if(!origin.is_open() || !destiny.is_open()){
-        std::cout<<"Error al abrir alguno de los archivos"<<"\n";
-		origin.close();
-		destiny.close();
+        std::cerr<<"Error al abrir alguno de los archivos"<<"\n";
         return false;
     }
 
 	auto start = std::chrono::steady_clock::now();
+
 	while(true){
 		str.clear();
 
 
 		origin.read(reinterpret_cast<char*>(&buff[0]), totalBytes);
-		
+			
 		size_t numberByte = origin.gcount(); //cantidad de bytes leidos por iteracion
-		
+			
 		if(numberByte == 0) break; //si no hay bytes entonces se termino la lectura
 
 		if(origin.bad()){
-			std::cout<<"No se pudo leer bien"<<"\n";
-			origin.close();
-			destiny.close();
+			std::cerr<<"No se pudo leer bien"<<"\n";
 			return false;
 		}
 
 		size_t numElements = numberByte/sizeof(int32_t); //Cantidad de numeros
-		
+		char temp[13]{};
 		for(size_t i = 0; i < numElements; i++){
+			std::to_chars_result res = std::to_chars(temp, temp+12, buff[i]);
 
-			//pasar de numeros a texto y almacernar los numeros en el string
-			str.append(std::to_string(buff[i])); 
-			str += ' ';
+			if(res.ec != std::errc()){
+				std::cerr<<std::make_error_code(res.ec).message() << '\n';
+				return false;
+				}
+			else{
+					size_t len = res.ptr - temp;
+					if(len+1 <= 13){
+						temp[len] = ' ';
+						++len;
+						str.append(temp, len);
+					}
+					else{
+						std::cerr<<"Error de tamnio, se excede el tamanio de temp"<<'\n';
+						return false;
+					}
+			}
+				
 		}
 
 		destiny.write(str.data(), str.size());
-		
-		if(destiny.fail()){
-			std::cout<<"Error de escritura"<<"\n";
-			origin.close();
-			destiny.close();
-			return false;
-    	}	
-		
+	}
+	if(destiny.fail()){
+		std::cerr<<"fallo de escritura"<<'\n';
+		return false;
 	}
 	auto end = std::chrono::steady_clock::now();
 	std::chrono::duration<double> dur = end-start;
 	std::cout<<"tiempo de copiar a lectura humana: "<<dur.count()<<"\n";
-	origin.close();
-	destiny.close();
 
 	return true;
 }

@@ -20,6 +20,10 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
             std::string val((argv[i]));
             int pos = i+1;
             if(val == "-sizes" && pos < argc){
+                if(argv[pos] == "-output"){
+                    std::cerr<<"El path del sizes no existe"<<'\n';
+                    return std::monostate{};
+                }
                 elements["size"] = argv[pos];
             }
             else if(val == "-output" && pos < argc){
@@ -27,17 +31,18 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
             }
         }
         if(elements.size() != 3){
-            std::cout<<"Error comando no tiene los argumentos requeridos"<<" "<<elements.size()<<"\n";
+            std::cerr<<"Error comando no tiene los argumentos requeridos"<<" "<<elements.size()<<"\n";
             for(const auto& pair : elements){
-                std::cout<<pair.first<<" "<<pair.second<<"\n\n";
+                std::cerr<<pair.first<<" "<<pair.second<<'\n';
             } 
             return std::monostate{};
         }
-       auto tmp2 = ParsedGenerator(elements);
+      
+        auto tmp2 = ParsedGenerator(elements);
 
         if (std::holds_alternative<GeneratorData>(tmp2)) return std::get<GeneratorData>(tmp2);
 
-        else {std::cout<<"lolazo"; return std::monostate{};}
+        else {std::cerr<<"lolazo"; return std::monostate{};}
 
     }
 
@@ -46,27 +51,44 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
             int pos = i+1;
             std::string val((argv[i]));
             if(val == "-input" && pos < argc){
+                if(argv[pos] == "-output"){
+                    std::cerr<<"El path del input no existe"<<'\n';
+                    return std::monostate{};
+                }
+
                 elements["input"] = argv[pos];
             }
             else if(val == "-output" && pos < argc){
+                if(argv[pos] == "-alg"){
+                    std::cerr<<"El path del output no existe"<<'\n';
+                    return std::monostate{};
+                }
                 elements["output"] = argv[pos];
             }
             else if(val == "-alg" && pos < argc){
+                if(argv[pos] == "-pageSize"){
+                    std::cerr<<"El path del alg no existe"<<'\n';
+                    return std::monostate{};
+                }
                 elements["alg"] = argv[pos];
             }
             else if(val == "-pageSize" && pos < argc){
+                if(argv[pos] == "-pageCount"){
+                    std::cerr<<"El path del pageSize no existe"<<'\n';
+                    return std::monostate{};
+                }
                 elements["pageSize"] = argv[pos];
             }
             else if(val == "-pageCount" && pos < argc){
                 elements["pageCount"] = argv[pos];
             }
         }
-        if(elements.size() != 5){
-            std::cout<<"Error comando no tiene los argumentos requeridos"<<"\n";
+        if(elements.size() != 6){
+            std::cerr<<"Error comando no tiene los argumentos requeridos"<<"\n";
             return std::monostate{};
         }
         for(const auto& pair : elements){
-            std::cout<<pair.first<<" "<<pair.second<<"\n\n";
+            std::cerr<<pair.first<<" "<<pair.second<<"\n\n";
         } 
         auto tmp1 = ParsedSorter(elements);
 
@@ -76,7 +98,7 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
     }
 
     else{
-        std::cout<<"Error un comando no existe o no tiene la cantidad apropiada de elementos"<<"\n";
+        std::cerr<<"Error un comando no existe o no tiene la cantidad apropiada de elementos"<<"\n";
         return std::monostate{};
     }
 
@@ -112,17 +134,17 @@ std::variant<std::monostate, SorterData> Parsed::ParsedSorter(const std::unorder
         pageSize = std::stoull(elements.at("pageSize"));
         pageCount = std::stoull(elements.at("pageCount"));
     } catch(const std::invalid_argument &e){
-        std::cout<<"Error de valor: "<<e.what()<<"\n";
+        std::cerr<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     } catch(const std::out_of_range &e){
-        std::cout<<"Error de valor: "<<e.what()<<"\n";
+        std::cerr<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     }
 
     try{
         alg = StringToAlgo(elements.at("alg"));
     }catch(const std::invalid_argument &e){
-        std::cout<<"Error de valor: "<<e.what()<<"\n";
+        std::cerr<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     }
 

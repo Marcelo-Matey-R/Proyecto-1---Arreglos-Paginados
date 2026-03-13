@@ -40,7 +40,7 @@ void BinaryFileManager::GenerateFile(std::string filePath){
 
 				file.write(reinterpret_cast<const char*>(&buff[0]), totalBytes);
 			}
-			
+
 	}catch(const std::filesystem::filesystem_error &e){
 		std::cerr<<"el archivo no sse puedo generar debido a: "<<e.what()<<'\n';
 		return;
@@ -83,9 +83,7 @@ bool BinaryFileManager::CopyBinaryFile(const std::string &nameOrigin, const std:
 }
 
 bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::string &nameDestiny){
-	if(nameOrigin == "" || nameOrigin == " "){std::cerr<<"El path " + nameOrigin + " no es valido"<<'\n'; return false;}
 	if(!std::filesystem::exists(nameOrigin)){std::cerr<<"El path " + nameOrigin + " no existe"<<'\n'; return false;}
-	if(nameDestiny == "" || nameDestiny == " "){std::cerr<<"El path " + nameDestiny + "no es valido"<<'\n'; return false;}
 	if(!std::filesystem::exists(nameDestiny)){std::cerr<<"El path " + nameDestiny + " no existe"<<'\n'; return false;}
 	if(std::filesystem::equivalent(nameOrigin, nameDestiny)){std::cerr<<"El path " + nameDestiny + "y el path" + nameOrigin + "son el mismo"<<'\n'; return false;}
 

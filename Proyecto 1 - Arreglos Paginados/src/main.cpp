@@ -1,8 +1,8 @@
 #include <iostream>
 #include <variant>
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\StructGenerator.h"
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Parsed\Parsed.h"
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSorts.h"
+#include "Structs y Enums\StructGenerator.h"
+#include "Parsed\Parsed.h"
+#include "Structs y Enums\EnumSorts.h"
 
 
 int main(int argc, char* argv[]){

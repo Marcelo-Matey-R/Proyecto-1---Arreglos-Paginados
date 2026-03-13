@@ -1,4 +1,4 @@
-#include "C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Proyecto 1 - Arreglos Paginados\src\Structs y Enums\EnumSizes.h"
+#include "EnumSizes.h"
 #include <iostream>
 #include <cstdint>
 #include <string_view>

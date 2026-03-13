@@ -6,7 +6,7 @@
 
 CommandResult Parsed::InputParser(int argc, char* argv[]){
     if(argc < 2){
-        throw std::invalid_argument("La cantidad de elementos: argc = " + std::to_string(argc) + " no esta permitida");
+        std::cerr<<"La cantidad de elementos: argc = " + std::to_string(argc) + " no esta permitida"<<'\n';
         return std::monostate{};
     }
     
@@ -18,69 +18,64 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
     if(command == "generator" && argc == 6){
         for(int i = 2; i < argc; i++){
             std::string val((argv[i]));
-            int pos = i+1;
-            if(val == "-sizes" && pos < argc){
-                if(argv[pos] == "-output"){
+            if(val == "-sizes" && (i+1) < argc){
+                if(argv[i+1] == "-output"){
                     std::cerr<<"El path del sizes no existe"<<'\n';
                     return std::monostate{};
                 }
-                elements["size"] = argv[pos];
+                elements["size"] = argv[++i];
             }
-            else if(val == "-output" && pos < argc){
-                elements["output"] = argv[pos];
+            else if(val == "-output" && (i+1) < argc){
+                elements["output"] = argv[++i];
             }
         }
         if(elements.size() != 3){
             std::cerr<<"Error comando no tiene los argumentos requeridos"<<" "<<elements.size()<<"\n";
-            for(const auto& pair : elements){
-                std::cerr<<pair.first<<" "<<pair.second<<'\n';
-            } 
             return std::monostate{};
         }
       
         auto tmp2 = ParsedGenerator(elements);
-
+        
         if (std::holds_alternative<GeneratorData>(tmp2)) return std::get<GeneratorData>(tmp2);
 
         else {std::cerr<<"lolazo"; return std::monostate{};}
 
     }
 
-    else if(command == "sorter" && argc == 11){
+    else if(command == "sorter" && argc == 12){
         for(int i = 2; i < argc; i++){
-            int pos = i+1;
             std::string val((argv[i]));
-            if(val == "-input" && pos < argc){
-                if(argv[pos] == "-output"){
+            if(val == "-input" && (i+1) < argc){
+                if(argv[i+1] == "-output"){
                     std::cerr<<"El path del input no existe"<<'\n';
                     return std::monostate{};
                 }
 
-                elements["input"] = argv[pos];
+                elements["input"] = argv[++i];
             }
-            else if(val == "-output" && pos < argc){
-                if(argv[pos] == "-alg"){
+            else if(val == "-output" && (i+1) < argc){
+                if(argv[(i+1)] == "-alg"){
                     std::cerr<<"El path del output no existe"<<'\n';
                     return std::monostate{};
                 }
-                elements["output"] = argv[pos];
+                elements["output"] = argv[++i];
             }
-            else if(val == "-alg" && pos < argc){
-                if(argv[pos] == "-pageSize"){
+            else if(val == "-alg" && (i+1) < argc){
+                if(argv[(i+1)] == "-pageSize"){
                     std::cerr<<"El path del alg no existe"<<'\n';
                     return std::monostate{};
                 }
-                elements["alg"] = argv[pos];
+                elements["alg"] = argv[++i];
             }
-            else if(val == "-pageSize" && pos < argc){
-                if(argv[pos] == "-pageCount"){
+            else if(val == "-pageSize" && (i+1) < argc){
+                if(argv[(i+1)] == "-pageCount"){
                     std::cerr<<"El path del pageSize no existe"<<'\n';
                     return std::monostate{};
                 }
-                elements["pageSize"] = argv[pos];
+                elements["pageSize"] = argv[++i];
             }
-            else if(val == "-pageCount" && pos < argc){
-                elements["pageCount"] = argv[pos];
+            else if(val == "-pageCount" && (i+1) < argc){
+                elements["pageCount"] = argv[++i];
             }
         }
         if(elements.size() != 6){

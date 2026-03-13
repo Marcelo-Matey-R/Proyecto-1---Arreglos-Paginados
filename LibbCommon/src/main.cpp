@@ -8,15 +8,14 @@
 int main(int argc, char* argv[]){
     CommandResult res = Parsed::InputParser(argc, argv);
     if (std::holds_alternative<std::monostate>(res)) {
-        //std::cout << "Error al parsear los argumentos.\n";
-        //std::cout<<"argc = "<<argc<<"\n";
-        for(int i = 0; i < argc; i++){
-            std::cout<<argv[i]<<"\n";
-        } 
+        std::cout << "Error al parsear los argumentos.\n";
+        std::cout<<"argc = "<<argc<<"\n";
+
         return 1;
     }
 
     if (std::holds_alternative<GeneratorData>(res)) {
+        std::cout<<"entro"<<'\n';
         GeneratorData g = std::get<GeneratorData>(res);
 
         std::cout << "Command: " << g.commandType << "\n";

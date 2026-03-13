@@ -87,9 +87,6 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
             std::cerr<<"Error comando no tiene los argumentos requeridos"<<"\n";
             return std::monostate{};
         }
-        for(const auto& pair : elements){
-            std::cerr<<pair.first<<" "<<pair.second<<"\n\n";
-        } 
         auto tmp1 = ParsedSorter(elements);
 
         if (std::holds_alternative<SorterData>(tmp1)) return std::get<SorterData>(tmp1);
@@ -112,7 +109,7 @@ std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(const std::u
     try{
         size = StringToSize(s);
     } catch(const std::invalid_argument &e){
-        std::cout<<"Error de valor: "<<e.what()<<"\n";
+        std::cerr<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};
     }
     parse.filePath = elements.at("output");

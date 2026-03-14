@@ -1,6 +1,6 @@
-#include "Parsed.h"
-#include "Structs y Enums\EnumSizes.h"
-#include "Structs y Enums\EnumSorts.h"
+#include "common\Parsed.h"
+#include "common\EnumSizes.h"
+#include "common\EnumSorts.h"
 #include <variant>
 #include <iostream>
 

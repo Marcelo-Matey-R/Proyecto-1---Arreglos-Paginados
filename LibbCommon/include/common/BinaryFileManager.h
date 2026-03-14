@@ -3,7 +3,7 @@
 #include <string_view>
 #include <random>
 #include <ostream>
-#include "Structs y Enums\EnumSizes.h"
+#include "EnumSizes.h"
 
 #ifndef BINARYFILEMANAGER_H
 #define BINARYFILEMANAGER_H

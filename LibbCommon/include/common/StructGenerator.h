@@ -1,8 +1,8 @@
 #include <string>
 #include <variant>
 #include <cstdint>
-#include "Structs y Enums\EnumSizes.h"
-#include "Structs y Enums\EnumSorts.h"
+#include "EnumSizes.h"
+#include "EnumSorts.h"
 
 #pragma once
 

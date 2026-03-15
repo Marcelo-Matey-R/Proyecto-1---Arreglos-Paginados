@@ -1,4 +1,4 @@
-#include "Structs y Enums\StructGenerator.h"
+#include "Structs.h"
 #include <unordered_map>
 #include <string>
 

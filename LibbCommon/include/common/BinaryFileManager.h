@@ -20,13 +20,17 @@ class BinaryFileManager{
     std::mt19937 gen{rng()};
     std::uniform_int_distribution<int32_t> dis{INT32_MIN, INT32_MAX};
 
-    SIZES fileSize = SIZES::SMALL;
-    size_t totalNumbers = fileSize/totalBytes; //Maximo numero de repeticiones
+    //Tamanio del archivo
+    SIZES fileSize;
+
+    //Maximo numero de repeticiones
+    size_t totalNumbers; 
 
     int32_t buff[arraySize];
 
     public:
-    BinaryFileManager(std::string_view fileSize);
+    BinaryFileManager(SIZES fileSize);
+    BinaryFileManager();
     void SetFileSize(SIZES size);
     SIZES GetFileSize(){return fileSize;}
 

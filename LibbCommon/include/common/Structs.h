@@ -15,7 +15,8 @@ struct GeneratorData{
 struct SorterData{
     std::string commandType;
     std::string inputFilePath;
-    std::string outputFilePath;
+    std::string outputFilePathBin;
+    std::string outputFilePathTxt;
     Algo sortedAlgorithm;
     size_t pageSize;
     size_t pageCount;

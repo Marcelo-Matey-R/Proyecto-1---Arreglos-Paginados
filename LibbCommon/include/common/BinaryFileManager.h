@@ -10,7 +10,7 @@
 
 class BinaryFileManager{
     //Calculo de Bytes por array
-    static constexpr size_t arraySize = 131075;
+    static constexpr size_t arraySize = 131072;
     static constexpr size_t intSize = sizeof(int32_t);
     static constexpr size_t totalBytes = intSize*arraySize;
     

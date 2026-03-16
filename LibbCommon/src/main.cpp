@@ -1,9 +1,11 @@
 #include <iostream>
 #include <variant>
-#include "Structs y Enums\StructGenerator.h"
-#include "Parsed\Parsed.h"
-#include "Structs y Enums\EnumSorts.h"
-
+#include "common\Structs.h"
+#include "common\Parsed.h"
+#include "common\EnumSorts.h"
+#include "common\IOManager.h"
+#include "common\BinaryFileManager.h"
+#include <chrono>
 
 int main(int argc, char* argv[]){
     CommandResult res = Parsed::InputParser(argc, argv);
@@ -17,21 +19,20 @@ int main(int argc, char* argv[]){
     if (std::holds_alternative<GeneratorData>(res)) {
         std::cout<<"entro"<<'\n';
         GeneratorData g = std::get<GeneratorData>(res);
+        IOManager::GeneratorDataManager(g);
+        auto start = std::chrono::steady_clock::now();
+        BinaryFileManager bf = BinaryFileManager(g.fileSize);
+        auto end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> dur = end - start;
+        std::cout << "Tiempo: " << dur.count() << "s" << std::endl;
 
-        std::cout << "Command: " << g.commandType << "\n";
-        std::cout << "File path: " << g.filePath << "\n";
-        std::cout << "File size: " << g.fileSize << "\n";
+        bf.GenerateFile(g.filePath);
+        
     }
 
     else if (std::holds_alternative<SorterData>(res)) {
         SorterData s = std::get<SorterData>(res);
-
-        std::cout << "Command: " << s.commandType << "\n";
-        std::cout << "Input: " << s.inputFilePath << "\n";
-        std::cout << "Output: " << s.outputFilePath << "\n";
-        std::cout << "Algorithm: " << AlgoToString(s.sortedAlgorithm) << "\n";
-        std::cout << "PageSize: " << s.pageSize << "\n";
-        std::cout << "PageCount: " << s.pageCount << "\n";
+        IOManager::SorterDataManager(s);
     }
     
 }

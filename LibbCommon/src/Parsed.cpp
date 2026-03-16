@@ -4,6 +4,8 @@
 #include <variant>
 #include <iostream>
 
+#pragma region InputParser
+
 CommandResult Parsed::InputParser(int argc, char* argv[]){
     if(argc < 2){
         std::cerr<<"La cantidad de elementos: argc = " + std::to_string(argc) + " no esta permitida"<<'\n';
@@ -18,7 +20,7 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
     if(command == "generator" && argc == 6){
         for(int i = 2; i < argc; i++){
             std::string val((argv[i]));
-            if(val == "-sizes" && (i+1) < argc){
+            if(val == "-size" && (i+1) < argc){
                 if(argv[i+1] == "-output"){
                     std::cerr<<"El path del sizes no existe"<<'\n';
                     return std::monostate{};
@@ -95,7 +97,10 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
     }
 
 } 
+#pragma endregion
 
+
+#pragma region Parseos del tipo de comando
 std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(const std::unordered_map<std::string, std::string> &elements){
     GeneratorData parse;
     parse.commandType = elements.at("command");
@@ -115,8 +120,6 @@ std::variant<std::monostate, GeneratorData> Parsed::ParsedGenerator(const std::u
 
 std::variant<std::monostate, SorterData> Parsed::ParsedSorter(const std::unordered_map<std::string, std::string> &elements){
     SorterData parse;
-    
-    std::string input = elements.at("input");
     std::string output = elements.at("output");
     Algo alg;
     size_t pageSize;
@@ -142,10 +145,12 @@ std::variant<std::monostate, SorterData> Parsed::ParsedSorter(const std::unorder
 
     parse.commandType = elements.at("command");
     parse.inputFilePath = elements.at("input");
-    parse.outputFilePath = elements.at("output");
+    parse.outputFilePathBin = output;
+    parse.outputFilePathTxt = output;
     parse.sortedAlgorithm = alg;
     parse.pageCount = pageCount;
     parse.pageSize = pageSize;
 
     return parse;
 }
+#pragma endregion

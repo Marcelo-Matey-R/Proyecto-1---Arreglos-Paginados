@@ -2,7 +2,6 @@
 #include <string>
 #include <string_view>
 #include <random>
-#include <ostream>
 #include "EnumSizes.h"
 
 #ifndef BINARYFILEMANAGER_H

@@ -1,10 +1,7 @@
 #include "common\BinaryFileManager.h"
 #include <iostream>
 #include <fstream>
-#include <cstdint>
 #include <chrono>
-#include <string>
-#include <string_view>
 #include <charconv>
 #include <filesystem>
 
@@ -194,6 +191,7 @@ bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::st
 
 #pragma endregion
 
+#pragma region Swapping Utilities
 
 bool BinaryFileManager::CopyInArray(const std::string &nameOrigin, int32_t* arr, size_t beginning, size_t total_bytes){
 	std::ifstream file;
@@ -235,3 +233,5 @@ bool BinaryFileManager::UpdateFileFromArray(const std::string &fileToUpdate, int
 	}
 	return true;
 }
+
+#pragma endregion

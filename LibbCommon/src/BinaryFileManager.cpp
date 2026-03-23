@@ -172,7 +172,7 @@ bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::st
 						str.append(temp, len);
 					}
 					else{
-						std::cerr<<"Error de tamnio, se excede el tamanio de temp"<<'\n';
+						std::cerr<<"Error de tamanio, se excede el tamanio de temp"<<'\n';
 						return false;
 					}
 			}
@@ -193,3 +193,45 @@ bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::st
 }
 
 #pragma endregion
+
+
+bool BinaryFileManager::CopyInArray(const std::string &nameOrigin, int32_t* arr, size_t beginning, size_t total_bytes){
+	std::ifstream file;
+	file.open(nameOrigin, std::ios::in | std::ios::binary);
+	if(!file.is_open()){
+		std::cerr<<"Hubo un inconveniente para abrir el archivo: "<<nameOrigin<<'\n';
+		return false;
+	}
+	file.seekg(beginning);
+	if(file.fail()){
+		std::cerr<<"El puntero de lectura tuvo un fallo"<<'\n';
+		return false;
+	}
+	file.read(reinterpret_cast<char*>(arr), total_bytes);
+	if(file.fail()){
+		std::cerr<<"Hubo un error de lectura"<<'\n';
+		return false;
+	}
+	
+	return true;
+}
+
+bool BinaryFileManager::UpdateFileFromArray(const std::string &fileToUpdate, int32_t* arr, size_t beginning, size_t total_bytes){
+	std::fstream file;
+	file.open(fileToUpdate, std::ios::in | std::ios::out | std::ios::binary);
+	if(!file.is_open()){
+		std::cerr<<"Hubo un inconveniente para abrir el archivo: "<<fileToUpdate<<'\n';
+		return false;
+	}
+	file.seekp(beginning);
+	if(file.fail()){
+		std::cerr<<"El puntero de escritura tuvo un fallo"<<'\n';
+		return false;
+	}
+	file.write(reinterpret_cast<const char*>(arr), total_bytes);
+	if(file.fail()){
+		std::cerr<<"Hubo un error de escritura"<<'\n';
+		return false;
+	}
+	return true;
+}

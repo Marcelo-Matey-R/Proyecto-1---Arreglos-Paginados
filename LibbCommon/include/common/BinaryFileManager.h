@@ -37,8 +37,8 @@ class BinaryFileManager{
     void GenerateFile(std::string filePath);
     bool CopyBinaryFile(const std::string &nameOrigin, const std::string &nameDestiny);
     bool CopyTxtFile(const std::string &nameOrigin, const std::string &nameDestiny);
-
-
+    bool CopyInArray(const std::string &nameOrigin, int32_t* arr, size_t beginning, size_t total_bytes);
+    bool UpdateFileFromArray(const std::string &fileToUpdate, int32_t* arr, size_t beginning, size_t total_bytes);
 };
 
 #endif

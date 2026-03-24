@@ -2,7 +2,7 @@
 #ifndef PAGED_MANAGER_H
 #define PAGED_MANAGER_H
 
-class PagedManager{
+class Page{
     private:
     int numberPage;
     size_t pagedSize;
@@ -10,8 +10,8 @@ class PagedManager{
     size_t quantityBytes;
     public:
     int32_t* page;
-    PagedManager(int numberPage, size_t pagedSize);
-    ~PagedManager();
+    Page(int numberPage, size_t pagedSize);
+    ~Page();
     size_t GetQuantityBytes(){return quantityBytes;}
     int GetNumberPage(){return numberPage;}
     size_t GetInicialPos(){return inicialPos;}

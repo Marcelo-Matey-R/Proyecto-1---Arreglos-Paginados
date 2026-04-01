@@ -4,7 +4,7 @@
 
 class Page{
     private:
-    int numberPage;
+    long long numberPage;
     size_t pagedSize;
     size_t inicialPos;
     size_t quantityBytes;
@@ -12,7 +12,7 @@ class Page{
     long long lastUsed;
     public:
     int32_t* page;
-    Page(int numberPage, size_t pagedSize);
+    Page(long long numberPage, size_t pagedSize, size_t fileBytes);
     ~Page();
     size_t GetQuantityBytes(){return quantityBytes;}
     int GetNumberPage(){return numberPage;}

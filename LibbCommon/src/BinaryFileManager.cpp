@@ -1,4 +1,4 @@
-#include "common\BinaryFileManager.h"
+#include "common/BinaryFileManager.h"
 #include <iostream>
 #include <fstream>
 #include <chrono>

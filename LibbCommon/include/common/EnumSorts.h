@@ -4,7 +4,7 @@
 
 #pragma once
 
-enum class Algo { QUICKSORT, MERGESORT };
+enum class Algo { QUICKSORT, MERGESORT, THREEWAYMERGESORT, INSERTIONSORT, SELECTIONSORT };
 
 Algo StringToAlgo(std::string_view str);
 

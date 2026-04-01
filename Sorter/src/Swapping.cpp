@@ -1,4 +1,4 @@
-#include "sorter\Swapping.h"
+#include "Swapping.h"
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -10,13 +10,14 @@ bool Swapping::CopyInArray(const std::string &nameOrigin, int32_t* arr, size_t b
     std::filesystem::path p = nameOrigin;
     uintmax_t n = std::filesystem::file_size(p);
     if(beginning > n){
-        std::cerr<<"La posicion inicial es mayor al tamanio del archivo"<<'\n';
+		std::cout << "file size: " << n << '\n';
+		std::cout << "total_bytes: " << total_bytes << '\n';
+		std::cout << "beginning: " << beginning << '\n';
+        std::cerr<<"La posicion inicial es mayor al tamanio del archivo "<<'\n';
         return false;
     }
-    if(beginning + total_bytes > n){
-        std::cerr<<"Los bytes a leer son mayores al tamanio del archivo "<<'\n';
-        return false;
-    }
+    total_bytes = std::min(total_bytes, n - beginning);
+
 	std::ifstream file;
 	file.open(nameOrigin, std::ios::in | std::ios::binary);
 	if(!file.is_open()){

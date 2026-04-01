@@ -1,0 +1,11 @@
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/CMakeFiles/edit_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/CMakeFiles/rebuild_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon/CMakeFiles/LibbCommon.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon/CMakeFiles/edit_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon/CMakeFiles/rebuild_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Generator/CMakeFiles/Generator.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Generator/CMakeFiles/edit_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Generator/CMakeFiles/rebuild_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter/CMakeFiles/Sorter.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter/CMakeFiles/edit_cache.dir
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/cmake_install.cmake",
+		"C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon/cmake_install.cmake",
+		"C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Generator/cmake_install.cmake",
+		"C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

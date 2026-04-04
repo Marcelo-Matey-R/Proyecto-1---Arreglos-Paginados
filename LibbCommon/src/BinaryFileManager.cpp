@@ -105,7 +105,7 @@ bool BinaryFileManager::CopyTxtFile(const std::string &nameOrigin, const std::st
 
 	//Abrimos los dos archivos y verificamos si se abrieron correctamente
 	origin.open(nameOrigin, std::ios::in | std::ios::binary);
-	destiny.open(nameDestiny, std::ios::out);
+	destiny.open(nameDestiny, std::ios::out | std::ios::trunc);
 
 	if(!origin.is_open() || !destiny.is_open()){
         std::cerr<<"Error al abrir alguno de los archivos"<<"\n";

@@ -1,0 +1,68 @@
+[
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/LibbCommon.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\LibbCommon.dir\\src\\BinaryFileManager.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\LibbCommon\\src\\BinaryFileManager.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/BinaryFileManager.cpp",
+  "output": "LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/LibbCommon.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\LibbCommon.dir\\src\\EnumSizes.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\LibbCommon\\src\\EnumSizes.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSizes.cpp",
+  "output": "LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/LibbCommon.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\LibbCommon.dir\\src\\EnumSorts.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\LibbCommon\\src\\EnumSorts.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSorts.cpp",
+  "output": "LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/LibbCommon.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\LibbCommon.dir\\src\\IOManager.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\LibbCommon\\src\\IOManager.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/IOManager.cpp",
+  "output": "LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/LibbCommon",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/LibbCommon.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\LibbCommon.dir\\src\\Parsed.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\LibbCommon\\src\\Parsed.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/Parsed.cpp",
+  "output": "LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Generator",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Generator.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Generator.dir\\src\\main.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Generator\\src\\main.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Generator/src/main.cpp",
+  "output": "Generator/CMakeFiles/Generator.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Sorter.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Sorter.dir\\src\\Page.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Sorter\\src\\Page.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/Page.cpp",
+  "output": "Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Sorter.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Sorter.dir\\src\\PagedArray.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Sorter\\src\\PagedArray.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/PagedArray.cpp",
+  "output": "Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Sorter.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Sorter.dir\\src\\SortingAlgorithm.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Sorter\\src\\SortingAlgorithm.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/SortingAlgorithm.cpp",
+  "output": "Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Sorter.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Sorter.dir\\src\\Swapping.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Sorter\\src\\Swapping.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/Swapping.cpp",
+  "output": "Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj"
+},
+{
+  "directory": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/build/Sorter",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/Sorter.dir/includes_CXX.rsp -O3 -DNDEBUG -std=c++17 -o CMakeFiles\\Sorter.dir\\src\\main.cpp.obj -c C:\\Users\\casam\\OneDrive\\Documentos\\GitHub\\Proyecto-1---Arreglos-Paginados\\Sorter\\src\\main.cpp",
+  "file": "C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/main.cpp",
+  "output": "Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj"
+}
+]

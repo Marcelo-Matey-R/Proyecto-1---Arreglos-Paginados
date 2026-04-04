@@ -76,75 +76,75 @@ Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj: Sorter/CMakeFiles/Sorter.dir/incl
 Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/Page.cpp
 Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj: Sorter/CMakeFiles/Sorter.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj -MF CMakeFiles\Sorter.dir\src\Page.cpp.obj.d -o CMakeFiles\Sorter.dir\src\Page.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.obj -MF CMakeFiles\Sorter.dir\src\Page.cpp.obj.d -o CMakeFiles\Sorter.dir\src\Page.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp
 
 Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sorter.dir/src/Page.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp > CMakeFiles\Sorter.dir\src\Page.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp > CMakeFiles\Sorter.dir\src\Page.cpp.i
 
 Sorter/CMakeFiles/Sorter.dir/src/Page.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sorter.dir/src/Page.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp -o CMakeFiles\Sorter.dir\src\Page.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Page.cpp -o CMakeFiles\Sorter.dir\src\Page.cpp.s
 
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: Sorter/CMakeFiles/Sorter.dir/flags.make
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: Sorter/CMakeFiles/Sorter.dir/includes_CXX.rsp
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/PagedArray.cpp
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: Sorter/CMakeFiles/Sorter.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj -MF CMakeFiles\Sorter.dir\src\PagedArray.cpp.obj.d -o CMakeFiles\Sorter.dir\src\PagedArray.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj -MF CMakeFiles\Sorter.dir\src\PagedArray.cpp.obj.d -o CMakeFiles\Sorter.dir\src\PagedArray.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp
 
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sorter.dir/src/PagedArray.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp > CMakeFiles\Sorter.dir\src\PagedArray.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp > CMakeFiles\Sorter.dir\src\PagedArray.cpp.i
 
 Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sorter.dir/src/PagedArray.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp -o CMakeFiles\Sorter.dir\src\PagedArray.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\PagedArray.cpp -o CMakeFiles\Sorter.dir\src\PagedArray.cpp.s
 
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: Sorter/CMakeFiles/Sorter.dir/flags.make
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: Sorter/CMakeFiles/Sorter.dir/includes_CXX.rsp
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/SortingAlgorithm.cpp
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: Sorter/CMakeFiles/Sorter.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj -MF CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.obj.d -o CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj -MF CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.obj.d -o CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp
 
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp > CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp > CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.i
 
 Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp -o CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\SortingAlgorithm.cpp -o CMakeFiles\Sorter.dir\src\SortingAlgorithm.cpp.s
 
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj: Sorter/CMakeFiles/Sorter.dir/flags.make
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj: Sorter/CMakeFiles/Sorter.dir/includes_CXX.rsp
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/Swapping.cpp
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj: Sorter/CMakeFiles/Sorter.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj -MF CMakeFiles\Sorter.dir\src\Swapping.cpp.obj.d -o CMakeFiles\Sorter.dir\src\Swapping.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.obj -MF CMakeFiles\Sorter.dir\src\Swapping.cpp.obj.d -o CMakeFiles\Sorter.dir\src\Swapping.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp
 
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sorter.dir/src/Swapping.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp > CMakeFiles\Sorter.dir\src\Swapping.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp > CMakeFiles\Sorter.dir\src\Swapping.cpp.i
 
 Sorter/CMakeFiles/Sorter.dir/src/Swapping.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sorter.dir/src/Swapping.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp -o CMakeFiles\Sorter.dir\src\Swapping.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\Swapping.cpp -o CMakeFiles\Sorter.dir\src\Swapping.cpp.s
 
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj: Sorter/CMakeFiles/Sorter.dir/flags.make
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj: Sorter/CMakeFiles/Sorter.dir/includes_CXX.rsp
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/src/main.cpp
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj: Sorter/CMakeFiles/Sorter.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj -MF CMakeFiles\Sorter.dir\src\main.cpp.obj.d -o CMakeFiles\Sorter.dir\src\main.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj -MF CMakeFiles\Sorter.dir\src\main.cpp.obj.d -o CMakeFiles\Sorter.dir\src\main.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp
 
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Sorter.dir/src/main.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp > CMakeFiles\Sorter.dir\src\main.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp > CMakeFiles\Sorter.dir\src\main.cpp.i
 
 Sorter/CMakeFiles/Sorter.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Sorter.dir/src/main.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp -o CMakeFiles\Sorter.dir\src\main.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Sorter && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Sorter\src\main.cpp -o CMakeFiles\Sorter.dir\src\main.cpp.s
 
 # Object files for target Sorter
 Sorter_OBJECTS = \

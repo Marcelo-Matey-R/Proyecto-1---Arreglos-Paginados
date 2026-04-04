@@ -76,15 +76,15 @@ Generator/CMakeFiles/Generator.dir/src/main.cpp.obj: Generator/CMakeFiles/Genera
 Generator/CMakeFiles/Generator.dir/src/main.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Generator/src/main.cpp
 Generator/CMakeFiles/Generator.dir/src/main.cpp.obj: Generator/CMakeFiles/Generator.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Generator/CMakeFiles/Generator.dir/src/main.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Generator/CMakeFiles/Generator.dir/src/main.cpp.obj -MF CMakeFiles\Generator.dir\src\main.cpp.obj.d -o CMakeFiles\Generator.dir\src\main.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT Generator/CMakeFiles/Generator.dir/src/main.cpp.obj -MF CMakeFiles\Generator.dir\src\main.cpp.obj.d -o CMakeFiles\Generator.dir\src\main.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp
 
 Generator/CMakeFiles/Generator.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Generator.dir/src/main.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp > CMakeFiles\Generator.dir\src\main.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp > CMakeFiles\Generator.dir\src\main.cpp.i
 
 Generator/CMakeFiles/Generator.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Generator.dir/src/main.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp -o CMakeFiles\Generator.dir\src\main.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\Generator && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\Generator\src\main.cpp -o CMakeFiles\Generator.dir\src\main.cpp.s
 
 # Object files for target Generator
 Generator_OBJECTS = \

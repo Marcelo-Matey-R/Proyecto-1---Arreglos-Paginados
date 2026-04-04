@@ -76,75 +76,75 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj: LibbCommon/C
 LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/BinaryFileManager.cpp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp > CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp > CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.i
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibbCommon.dir/src/BinaryFileManager.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp -o CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\BinaryFileManager.cpp -o CMakeFiles\LibbCommon.dir\src\BinaryFileManager.cpp.s
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/flags.make
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/includes_CXX.rsp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSizes.cpp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp > CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp > CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.i
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp -o CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSizes.cpp -o CMakeFiles\LibbCommon.dir\src\EnumSizes.cpp.s
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/flags.make
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/includes_CXX.rsp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSorts.cpp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp > CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp > CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.i
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibbCommon.dir/src/EnumSorts.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp -o CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\EnumSorts.cpp -o CMakeFiles\LibbCommon.dir\src\EnumSorts.cpp.s
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/flags.make
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/includes_CXX.rsp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/IOManager.cpp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\IOManager.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\IOManager.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\IOManager.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\IOManager.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibbCommon.dir/src/IOManager.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp > CMakeFiles\LibbCommon.dir\src\IOManager.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp > CMakeFiles\LibbCommon.dir\src\IOManager.cpp.i
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/IOManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibbCommon.dir/src/IOManager.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp -o CMakeFiles\LibbCommon.dir\src\IOManager.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\IOManager.cpp -o CMakeFiles\LibbCommon.dir\src\IOManager.cpp.s
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/flags.make
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/includes_CXX.rsp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj: C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/Parsed.cpp
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj: LibbCommon/CMakeFiles/LibbCommon.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\Parsed.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\Parsed.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.obj -MF CMakeFiles\LibbCommon.dir\src\Parsed.cpp.obj.d -o CMakeFiles\LibbCommon.dir\src\Parsed.cpp.obj -c C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibbCommon.dir/src/Parsed.cpp.i"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp > CMakeFiles\LibbCommon.dir\src\Parsed.cpp.i
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp > CMakeFiles\LibbCommon.dir\src\Parsed.cpp.i
 
 LibbCommon/CMakeFiles/LibbCommon.dir/src/Parsed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibbCommon.dir/src/Parsed.cpp.s"
-	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp -o CMakeFiles\LibbCommon.dir\src\Parsed.cpp.s
+	cd /d C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\build\LibbCommon && C:\msys64\ucrt64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\casam\OneDrive\Documentos\GitHub\Proyecto-1---Arreglos-Paginados\LibbCommon\src\Parsed.cpp -o CMakeFiles\LibbCommon.dir\src\Parsed.cpp.s
 
 # Object files for target LibbCommon
 LibbCommon_OBJECTS = \

@@ -4,6 +4,6 @@
 
 #pragma once
 
-enum SIZES : size_t {SMALL = 536870912, MEDIUM = 1073741824, LARGE = 2147483648};
+enum SIZES : size_t {SMALL = 134217728, MEDIUM = 268435456, LARGE = 536870912};
 
 SIZES StringToSize(std::string_view str);

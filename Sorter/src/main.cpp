@@ -30,13 +30,12 @@ int main(int argc, char* argv[]){
             SortingAlgorithms::Sorted(s.sortedAlgorithm, pA);
             auto end = std::chrono::steady_clock::now();
             std::chrono::duration<double> dur = end - start;
-            bf.CopyTxtFile(s.outputFilePathBin, s.outputFilePathTxt);
-
             std::cout<<"El tiempo durado fue de: "<<dur.count()<<'\n';
             std::cout<<"El algoritmo utilizado fue: "<<AlgoToString(s.sortedAlgorithm)<<'\n';
             std::cout<<"Las page faults fueron: "<<pA.GetPageFaults()<<'\n';
             std::cout<<"Las page hits fueron: "<<pA.GetPageHits()<<'\n';
         }
+        bf.CopyTxtFile(s.outputFilePathBin, s.outputFilePathTxt);
     }
     else{
         std::cerr<<"Se puso el comando incorrecto, se puso un generator no un sorter"<<'\n';

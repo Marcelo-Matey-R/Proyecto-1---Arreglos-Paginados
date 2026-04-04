@@ -16,7 +16,7 @@ PagedArray::PagedArray(size_t pagedCount, size_t pagedSize, long long totalInts,
 
 PagedArray::~PagedArray(){
     for(int i = 0; i < pagedCount; i++){
-        delete pagedArr[i];
+        SavePage(i);
     }
     delete[] pagedArr;
 }

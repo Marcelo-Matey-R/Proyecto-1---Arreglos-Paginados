@@ -35,16 +35,16 @@ cmake --build build
 
 ## Ejecucion
 
-# Generator:
+### Generator:
 
 ```bash
 ./build/Generator/Generator.exe generator -size <SiZE> -output <Nombre del archivo>
 ```
 SIZE puede ser Small, Medium o Large
 
-# Sorter
+### Sorter
 
 ```bash
-./build/Generator/Generator.exe sorter -input Files/input/<Nombre del archivo> -output <nombre del archivo> -alg Algo -pageSize <SIZE> -pageCount <Count>
+./build/Generator/Generator.exe sorter -input Files/input/<Nombre del archivo>.bin -output <nombre del archivo> -alg Algo -pageSize <SIZE> -pageCount <Count>
 ```
 Algo puede ser quicksort, threewaymergesort, mergesort, insertionsort y selectionsort

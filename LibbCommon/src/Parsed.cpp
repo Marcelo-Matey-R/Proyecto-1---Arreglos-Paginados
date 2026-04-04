@@ -75,9 +75,17 @@ CommandResult Parsed::InputParser(int argc, char* argv[]){
                     return std::monostate{};
                 }
                 elements["pageSize"] = argv[++i];
+                if(elements.at("pageSize")[0] == '-'){
+                    std::cerr<<"No pueden haber valores negativos de tamanios de pagina"<<'\n';
+                    return std::monostate{};
+                }
             }
             else if(val == "-pageCount" && (i+1) < argc){
                 elements["pageCount"] = argv[++i];
+                if(elements.at("pageCount")[0] == '-'){
+                    std::cerr<<"No pueden haber valores negativos de cantidad de pagina"<<'\n';
+                    return std::monostate{};
+                }
             }
         }
         if(elements.size() != 6){
@@ -128,6 +136,10 @@ std::variant<std::monostate, SorterData> Parsed::ParsedSorter(const std::unorder
     try{
         pageSize = std::stoull(elements.at("pageSize"));
         pageCount = std::stoull(elements.at("pageCount"));
+        if(pageCount == 0 || pageSize == 0){
+            std::cerr<<"El valor de la cantidad de paginas o tamanio de pagina no puede ser 0"<<'\n';
+            return std::monostate{};
+        }
     } catch(const std::invalid_argument &e){
         std::cerr<<"Error de valor: "<<e.what()<<"\n";
         return std::monostate{};

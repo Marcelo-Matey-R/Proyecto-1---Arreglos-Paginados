@@ -21,7 +21,7 @@ BinaryFileManager::BinaryFileManager(){
 void BinaryFileManager::SetFileSize(SIZES size){
 	this->fileSize = size;
 
-	this->totalNumbers = fileSize/totalBytes;
+	this->totalNumbers = (fileSize + totalBytes - 1)/totalBytes;
 }
 
 #pragma endregion
@@ -33,26 +33,36 @@ void BinaryFileManager::GenerateFile(std::string filePath){
 	std::ofstream file; 
     file.open(filePath, std::ios::out | std::ios::trunc | std::ios::binary );
 
+
 	if(!file.is_open()){
 		std::cerr<<"Error de apertura"<<"\n";
 		return;
 	}
 
+	size_t totalIntsToWrite = fileSize/sizeof(int32_t);
+	size_t count = 0;
+
 	try{	
 		//Creacion del archivo
-		for(size_t count = 0; count < totalNumbers; count++){ //Cantidad de llenados del buffer
-			for(size_t i = 0; i < arraySize-3; i+=4){//llenados del buffer en espacios de 4
+		while(count < totalIntsToWrite){ //Cantidad de llenados del buffer
+			size_t remaining = totalIntsToWrite - count;
+			size_t write = (arraySize > remaining) ? remaining : arraySize;
+			for(size_t i = 0; i < write; i+=4){//llenados del buffer en espacios de 4
 				buff[i] = dis(gen);
-				buff[i+1] = dis(gen);
-				buff[i+2] = dis(gen);
-				buff[i+3] = dis(gen);
+				if(i+1 < write) buff[i+1] = dis(gen);
+				if(i+2 < write) buff[i+2] = dis(gen);
+				if(i+3 < write) buff[i+3] = dis(gen);
 			}
+			
+			size_t bytesToWrite = (fileSize < totalBytes) ? remaining*sizeof(int32_t) : totalBytes;
 
-			file.write(reinterpret_cast<const char*>(&buff[0]), totalBytes); //escritura de todo el buffer lleno en el archivo
+			file.write(reinterpret_cast<const char*>(&buff[0]), bytesToWrite); //escritura de todo el buffer lleno en el archivo
+
+			count += write;
 		}
 
 	}catch(const std::filesystem::filesystem_error &e){ //atrapar por si hubo algun error del archivo
-		std::cerr<<"el archivo no sse puedo generar debido a: "<<e.what()<<'\n';
+		std::cerr<<"el archivo no se puedo generar debido a: "<<e.what()<<'\n';
 		return;
 	}
 

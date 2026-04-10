@@ -26,6 +26,7 @@ int main(int argc, char* argv[]){
         auto end = std::chrono::steady_clock::now();
         std::chrono::duration<double> dur = end - start;
         std::cout << "Tiempo: " << dur.count() << "s" << std::endl;
+        std::cout << "Tamanio del archivo: "<<g.fileSize<<'\n';
 
         bf.GenerateFile(g.filePath);
         

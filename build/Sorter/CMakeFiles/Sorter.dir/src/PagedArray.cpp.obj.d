@@ -172,17 +172,14 @@ Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/fs_dir.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/fs_ops.h \
- C:/msys64/ucrt64/include/c++/14.2.0/queue \
- C:/msys64/ucrt64/include/c++/14.2.0/deque \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_deque.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/deque.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/vector \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_heap.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_queue.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/unordered_map \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/unordered_map.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable_policy.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/enable_special_members.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/erase_if.h \
+ C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/LRU.h \
  C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/include/common/BinaryFileManager.h \
  C:/msys64/ucrt64/include/c++/14.2.0/random \
  C:/msys64/ucrt64/include/c++/14.2.0/cmath \
@@ -201,6 +198,11 @@ Sorter/CMakeFiles/Sorter.dir/src/PagedArray.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/tr1/poly_laguerre.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/tr1/riemann_zeta.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/random.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/vector \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/uniform_int_dist.h \
  C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/opt_random.h \
  C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/pmmintrin.h \

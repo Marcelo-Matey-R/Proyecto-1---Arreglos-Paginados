@@ -1,5 +1,5 @@
 #include "SortingAlgorithm.h"
-#include <algorithm>
+#include <iostream>
 
 #pragma region QUICK SORT
 long long SortingAlgorithms::partition(PagedArray &arr, long long low, long long high) {
@@ -7,12 +7,17 @@ long long SortingAlgorithms::partition(PagedArray &arr, long long low, long long
     long long i = (low - 1);
 
     for (long long j = low; j < high; j++) {
-        if (arr[j] < pivot) {
+        int32_t valJ = arr[j];
+        if (valJ < pivot) {
             i++;
-            std::swap(arr[i], arr[j]);
+            int32_t temp = arr[i];
+            arr[i] = valJ;
+            arr[j] = temp;
         }
     }
-    std::swap(arr[i+1], arr[high]);
+    int32_t temp = arr[i+1];
+    arr[i+1] = arr[high];
+    arr[high] = temp;
     return (i + 1);
 }
 
@@ -185,9 +190,12 @@ void SortingAlgorithms::insertionSort(PagedArray &arr, long long n){
         /* Move elements of arr[0..i-1], that are
            greater than key, to one position ahead
            of their current position */
-        while (j >= 0 && arr[j] > key) {
-            arr[j + 1] = arr[j];
+        int32_t val = arr[j];
+        while (j >= 0 && val > key) {
+            arr[j + 1] = val;
             j = j - 1;
+            if(j<0)break;
+            val = arr[j];
         }
         arr[j + 1] = key;
     }
@@ -203,21 +211,28 @@ void SortingAlgorithms::selectionSort(PagedArray &arr){
         // Assume the current position holds
         // the minimum element
         long long min_idx = i;
+        int32_t min_val = arr[min_idx];
 
         // Iterate through the unsorted portion
         // to find the actual minimum
         for (long long j = i + 1; j < n; ++j) {
-            if (arr[j] < arr[min_idx]) {
+            int32_t val_j = arr[j];
+            if (val_j < min_val) {
 
                 // Update min_idx if a smaller
                 // element is found
+                min_val = val_j;
                 min_idx = j; 
             }
         }
 
         // Move minimum element to its
         // correct position
-        std::swap(arr[i], arr[min_idx]);
+        if(min_idx != i){
+            int32_t temp = arr[i];
+            arr[i] = min_val;
+            arr[min_idx] = temp;
+        }
     }
 }
 #pragma endregion

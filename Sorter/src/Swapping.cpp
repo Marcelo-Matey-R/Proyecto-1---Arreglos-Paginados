@@ -16,7 +16,7 @@ bool Swapping::CopyInArray(const std::string &nameOrigin, int32_t* arr, size_t b
         std::cerr<<"La posicion inicial es mayor al tamanio del archivo "<<'\n';
         return false;
     }
-    total_bytes = std::min(total_bytes, n - beginning);
+    total_bytes = (total_bytes < n - beginning) ? total_bytes : n - beginning;
 
 	std::ifstream file;
 	file.open(nameOrigin, std::ios::in | std::ios::binary);

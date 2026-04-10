@@ -218,10 +218,9 @@ Sorter/CMakeFiles/Sorter.dir/src/main.cpp.obj: \
  C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/SortingAlgorithm.h \
  C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/PagedArray.h \
  C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/Page.h \
- C:/msys64/ucrt64/include/c++/14.2.0/queue \
- C:/msys64/ucrt64/include/c++/14.2.0/deque \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_deque.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/deque.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_heap.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_queue.h \
- C:/msys64/ucrt64/include/c++/14.2.0/chrono
+ C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/LRU.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/chrono \
+ C:/msys64/ucrt64/include/c++/14.2.0/fstream \
+ C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/bits/fstream.tcc

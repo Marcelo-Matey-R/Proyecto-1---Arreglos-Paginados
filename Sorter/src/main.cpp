@@ -8,6 +8,7 @@
 #include "SortingAlgorithm.h"
 #include <chrono>
 #include <filesystem>
+#include <fstream>
 
 int main(int argc, char* argv[]){
     CommandResult res = Parsed::InputParser(argc, argv);
@@ -24,6 +25,12 @@ int main(int argc, char* argv[]){
         bf.CopyBinaryFile(s.inputFilePath, s.outputFilePathBin);
         std::uintmax_t size = std::filesystem::file_size(s.outputFilePathBin);
         long long safeSize = static_cast<long long>(size / sizeof(int32_t)); 
+        std::ofstream f;
+        f.open("resultados.csv", std::ios::app);
+        if(!f.is_open()){
+            std::cerr<<"Error al abrir el archivo"<<'\n';
+            return -1;
+        }
         {
             PagedArray pA = PagedArray(s.pageCount, s.pageSize, safeSize, s.outputFilePathBin);
             auto start = std::chrono::steady_clock::now();
@@ -34,8 +41,18 @@ int main(int argc, char* argv[]){
             std::cout<<"El algoritmo utilizado fue: "<<AlgoToString(s.sortedAlgorithm)<<'\n';
             std::cout<<"Las page faults fueron: "<<pA.GetPageFaults()<<'\n';
             std::cout<<"Las page hits fueron: "<<pA.GetPageHits()<<'\n';
+            f<<s.pageSize<<','<<dur.count()<<','<<pA.GetPageFaults()<<','<<pA.GetPageHits()<<'\n';
         }
         bf.CopyTxtFile(s.outputFilePathBin, s.outputFilePathTxt);
+        try{
+			//Si el archivo no existe entonces borramos el original para sobreescribirlo
+			std::filesystem::remove(s.inputFilePath);
+			std::filesystem::remove(s.outputFilePathBin);
+			std::filesystem::remove(s.outputFilePathTxt);
+		}catch(const std::filesystem::filesystem_error &e){
+			std::cerr<<"No se pudo borrar debido a: "<<e.what()<<'\n';
+			return 1;
+		}
     }
     else{
         std::cerr<<"Se puso el comando incorrecto, se puso un generator no un sorter"<<'\n';

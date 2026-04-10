@@ -242,12 +242,16 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDr
   C:/msys64/ucrt64/include/c++/14.2.0/bits/cpp_type_traits.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/cxxabi_forced.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/enable_special_members.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/erase_if.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/exception.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/exception_defines.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/exception_ptr.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/functexcept.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/functional_hash.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/hash_bytes.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable_policy.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/invoke.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/ios_base.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/istream.tcc \
@@ -261,6 +265,7 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDr
   C:/msys64/ucrt64/include/c++/14.2.0/bits/move.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/nested_exception.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/new_allocator.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/ostream_insert.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/postypes.h \
@@ -281,6 +286,7 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDr
   C:/msys64/ucrt64/include/c++/14.2.0/bits/streambuf_iterator.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/string_view.tcc \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/stringfwd.h \
+  C:/msys64/ucrt64/include/c++/14.2.0/bits/unordered_map.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/uses_allocator.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/uses_allocator_args.h \
   C:/msys64/ucrt64/include/c++/14.2.0/bits/utility.h \
@@ -298,6 +304,7 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDr
   C:/msys64/ucrt64/include/c++/14.2.0/debug/assertions.h \
   C:/msys64/ucrt64/include/c++/14.2.0/debug/debug.h \
   C:/msys64/ucrt64/include/c++/14.2.0/exception \
+  C:/msys64/ucrt64/include/c++/14.2.0/ext/aligned_buffer.h \
   C:/msys64/ucrt64/include/c++/14.2.0/ext/alloc_traits.h \
   C:/msys64/ucrt64/include/c++/14.2.0/ext/atomicity.h \
   C:/msys64/ucrt64/include/c++/14.2.0/ext/numeric_traits.h \
@@ -320,6 +327,7 @@ LibbCommon/CMakeFiles/LibbCommon.dir/src/EnumSizes.cpp.obj: C:/Users/casam/OneDr
   C:/msys64/ucrt64/include/c++/14.2.0/tuple \
   C:/msys64/ucrt64/include/c++/14.2.0/type_traits \
   C:/msys64/ucrt64/include/c++/14.2.0/typeinfo \
+  C:/msys64/ucrt64/include/c++/14.2.0/unordered_map \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
   C:/msys64/ucrt64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -1342,10 +1350,6 @@ C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/syslimits.h:
 
 C:/msys64/ucrt64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/xmmintrin.h:
 
-C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSorts.cpp:
-
-C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/include/common/EnumSorts.h:
-
 C:/msys64/ucrt64/include/c++/14.2.0/bits/erase_if.h:
 
 C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h:
@@ -1353,6 +1357,10 @@ C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h:
 C:/msys64/ucrt64/include/c++/14.2.0/bits/unordered_map.h:
 
 C:/msys64/ucrt64/include/c++/14.2.0/unordered_map:
+
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/src/EnumSorts.cpp:
+
+C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/include/common/EnumSorts.h:
 
 C:/msys64/ucrt64/include/c++/14.2.0/algorithm:
 

@@ -12,6 +12,9 @@ PagedArray::PagedArray(size_t pagedCount, size_t pagedSize, long long totalInts,
     this->pageHits = 0;
     this->pageFaults = 0;
     this->totalInts = totalInts;
+    this->freePos = 0;
+    this->head = nullptr;
+    this->tail = nullptr;
 }
 
 PagedArray::~PagedArray(){
@@ -31,9 +34,10 @@ int32_t& PagedArray::operator[](long long idx){
         pageFaults++;
         int victim = FindFreeSpace();
         if(victim == -1){
-            victim = SelectPageToChange();
+            victim = PopLRU();
         }
         if(!SavePage(victim)){
+            std::cout<<victim<<'\n';
             throw std::runtime_error("Error a la hora de cargar la pagina al disco");
         }
         if(!LoadPage(victim, numberPaged)){
@@ -46,6 +50,13 @@ int32_t& PagedArray::operator[](long long idx){
 
     else{
         pageHits++;
+        auto it = pageToNode.find(numberPaged);
+        if(it != pageToNode.end()){
+            MoveToFront(it->second);
+        }
+        else{
+            throw std::runtime_error("Error a la hora de encontrar la pagina");
+        }
     }
 
     pagedArr[paged]->SetModified(true);
@@ -54,24 +65,17 @@ int32_t& PagedArray::operator[](long long idx){
     
 }
 
-int PagedArray::FindPage(int numberPaged){
-    for(int i = 0; i < pagedCount; i++){
-        if(pagedArr[i] == nullptr){
-            continue;
-        }
-        if(pagedArr[i]->GetNumberPage() == numberPaged){
-            return i;
-        }
-    }
+int PagedArray::FindPage(long long numberPaged){
+    auto page = pages.find(numberPaged);
+    if(page != pages.end()) return page->second;
     return -1;
 }
 
 int PagedArray::FindFreeSpace(){
-    for(int i = 0; i < pagedCount; i++){
-        if(pagedArr[i] == nullptr){
-            return i;
-        }
+    if(freePos < pagedCount){
+        return freePos++;
     }
+
     return -1;
 }
 
@@ -81,6 +85,10 @@ bool PagedArray::LoadPage(int idx, long long pageNumber){
     
     if(Swapping::CopyInArray(filePath, p->page, p->GetInicialPos(), p->GetQuantityBytes())){
         pagedArr[idx] = p;
+        pages[pageNumber] = idx;
+        LRUNode* node = new LRUNode(idx, pageNumber);
+        PushFront(node);
+        pageToNode[pageNumber] = node;
         return true;
     }
     else{
@@ -93,27 +101,74 @@ bool PagedArray::SavePage(int idx){
     if(pagedArr[idx] == nullptr){
         return true;
     }
+
+    Page* p = pagedArr[idx];
+    long long pageNumber = p->GetNumberPage();
+
     if(pagedArr[idx]->GetModified()){
         if(!Swapping::UpdateFileFromArray(filePath, pagedArr[idx]->page, pagedArr[idx]->GetInicialPos(), pagedArr[idx]->GetQuantityBytes())){
             return false;
         }
     }
-    delete pagedArr[idx];
+
+    auto it = pageToNode.find(pageNumber);
+    if(it == pageToNode.end()){
+        std::cerr << "Error a la hora de encontrar la pagina a eliminar\n";
+        return false;
+    }
+
+    LRUNode* node = it->second;
+    RemoveNode(node);
+    pageToNode.erase(it);
+    delete node;
+
+    pages.erase(pageNumber);
+    delete p;
     pagedArr[idx] = nullptr;
     return true;
 }
 
-int PagedArray::SelectPageToChange(){
-    int leastUsed = 0;
-    long long min = LLONG_MAX;
-    for(int i = 0; i < pagedCount; i++){
-        if(pagedArr[i] == nullptr) continue;
+void PagedArray::PushFront(LRUNode* node){
+    node->next = head;
+    node->prev = nullptr;
 
-        long long pUsed = pagedArr[i]->GetLastUsed();
-        if(pUsed < min){
-            min = pUsed;
-            leastUsed = i;
-        }
+    if(head != nullptr){
+        head->prev = node;
     }
-    return leastUsed;
+    else{
+        tail = node;
+    }
+    head = node;
+}
+
+void PagedArray::RemoveNode(LRUNode* node){
+    if(node->prev != nullptr){
+        node->prev->next = node->next;
+    }
+    else{
+        head = node->next;
+    }
+
+    if(node->next != nullptr){
+        node->next->prev = node->prev;
+    }
+    else{
+        tail = node->prev;
+    }
+    node->prev = nullptr;
+    node->next = nullptr;
+}
+
+void PagedArray::MoveToFront(LRUNode* node){
+    if(node == head) return;
+    RemoveNode(node);
+    PushFront(node);
+}
+
+int PagedArray::PopLRU(){
+    if(tail == nullptr){
+        return -1;
+    }
+
+    return tail->idx;
 }

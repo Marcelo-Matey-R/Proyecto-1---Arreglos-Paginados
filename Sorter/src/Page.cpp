@@ -10,7 +10,7 @@ Page::Page(long long numberPaged, size_t pagedSize, size_t fileBytes){
     if(initialPos >= fileBytes-1){
         this->quantityBytes = 0;
     } else {
-        this->quantityBytes = std::min(pageBytes, fileBytes - initialPos);
+        this->quantityBytes = (pageBytes < fileBytes - initialPos) ? pageBytes : fileBytes - initialPos;
     }
     this->inicialPos = initialPos; //posicion inicial en el archivo
     this->page = new int32_t[pagedSize]{}; //genera el array donde se guardan los numeros, se inicializan en 0

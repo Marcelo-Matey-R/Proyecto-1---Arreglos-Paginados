@@ -173,18 +173,6 @@ Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/ext/aligned_buffer.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/fs_dir.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/fs_ops.h \
- C:/msys64/ucrt64/include/c++/14.2.0/queue \
- C:/msys64/ucrt64/include/c++/14.2.0/deque \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_deque.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/deque.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/vector \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_vector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/vector.tcc \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_heap.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_queue.h \
- C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/include/common\EnumSorts.h \
  C:/msys64/ucrt64/include/c++/14.2.0/unordered_map \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/unordered_map.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/hashtable.h \
@@ -192,10 +180,6 @@ Sorter/CMakeFiles/Sorter.dir/src/SortingAlgorithm.cpp.obj: \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/enable_special_members.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/node_handle.h \
  C:/msys64/ucrt64/include/c++/14.2.0/bits/erase_if.h \
- C:/msys64/ucrt64/include/c++/14.2.0/algorithm \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_algo.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/algorithmfwd.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/uniform_int_dist.h \
- C:/msys64/ucrt64/include/c++/14.2.0/bits/stl_tempbuf.h \
- C:/msys64/ucrt64/include/c++/14.2.0/pstl/glue_algorithm_defs.h \
- C:/msys64/ucrt64/include/c++/14.2.0/pstl/execution_defs.h
+ C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/Sorter/include/sorter/LRU.h \
+ C:/Users/casam/OneDrive/Documentos/GitHub/Proyecto-1---Arreglos-Paginados/LibbCommon/include/common\EnumSorts.h \
+ C:/msys64/ucrt64/include/c++/14.2.0/iostream

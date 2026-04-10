@@ -41,18 +41,8 @@ int main(int argc, char* argv[]){
             std::cout<<"El algoritmo utilizado fue: "<<AlgoToString(s.sortedAlgorithm)<<'\n';
             std::cout<<"Las page faults fueron: "<<pA.GetPageFaults()<<'\n';
             std::cout<<"Las page hits fueron: "<<pA.GetPageHits()<<'\n';
-            f<<s.pageSize<<','<<dur.count()<<','<<pA.GetPageFaults()<<','<<pA.GetPageHits()<<'\n';
         }
         bf.CopyTxtFile(s.outputFilePathBin, s.outputFilePathTxt);
-        try{
-			//Si el archivo no existe entonces borramos el original para sobreescribirlo
-			std::filesystem::remove(s.inputFilePath);
-			std::filesystem::remove(s.outputFilePathBin);
-			std::filesystem::remove(s.outputFilePathTxt);
-		}catch(const std::filesystem::filesystem_error &e){
-			std::cerr<<"No se pudo borrar debido a: "<<e.what()<<'\n';
-			return 1;
-		}
     }
     else{
         std::cerr<<"Se puso el comando incorrecto, se puso un generator no un sorter"<<'\n';

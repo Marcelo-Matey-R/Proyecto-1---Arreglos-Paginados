@@ -45,6 +45,6 @@ SIZE puede ser Small, Medium o Large
 ### Sorter
 
 ```bash
-./build/Generator/Generator.exe sorter -input Files/input/<Nombre del archivo>.bin -output <nombre del archivo> -alg Algo -pageSize <SIZE> -pageCount <Count>
+./build/Sorter/Sorter.exe sorter -input Files/input/<Nombre del archivo>.bin -output <nombre del archivo> -alg Algo -pageSize <SIZE> -pageCount <Count>
 ```
 Algo puede ser quicksort, threewaymergesort, mergesort, insertionsort y selectionsort
